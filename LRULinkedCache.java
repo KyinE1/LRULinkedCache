@@ -36,7 +36,7 @@ public class LRULinkedCache<K, V> {
 		return s;
 	}
 
-	// 	Methods inherited from interface Collection.
+	// Methods inherited from interface Collection.
 	/** Empty the LRUCache. */
 	public void clear() {
 		// Reset header node.
@@ -51,7 +51,7 @@ public class LRULinkedCache<K, V> {
 		theSize = 0;
 	}
 
-	/**	Getter method. */
+	/** Getter method. */
 	public int size() {
 		return theSize;
 	}
@@ -97,10 +97,10 @@ public class LRULinkedCache<K, V> {
 		return null;
 	}
 	
-	/**	Add node to end of the cache.
+	/** Add node to end of the cache.
 	 * 	
-	 * 	@param key: Generic type.
-	 * 	@param value: Generic type.
+	 * @param key: Generic type.
+	 * @param value: Generic type.
 	 */
 	public void LRUPut(K key, V value) {
 		// Start at the node before the tail.
@@ -141,9 +141,9 @@ public class LRULinkedCache<K, V> {
 	}
 	
 	/** Nested class ListNode encapsulates the fundamental building 
-	 *	block of a LRU cache node contains a key and value, as well 
-	 *	as references to both the next and previous nodes in the cache
-	 *	K is the type of the key and V is the type of value.
+	 * block of a LRU cache node contains a key and value, as well 
+	 * as references to both the next and previous nodes in the cache
+	 * K is the type of the key and V is the type of value.
 	 */
 	private static class CacheNode<K, V> {
 		K key; 
@@ -151,12 +151,12 @@ public class LRULinkedCache<K, V> {
 		private CacheNode<K, V> next;
 		private CacheNode<K, V> prev;
 		
-		/**	Constructor. 
+		/** Constructor. 
 		 *	
-		 *	@param keyOfPair: The key of the CacheNode pair.
-		 *	@param valueOfPair: The value of the CacheNode pair.
-		 *	@param nextRef: The reference of the next node in the list.
-		 *	@param prevRef: The reference of the previous node in the list.
+		 * @param keyOfPair: The key of the CacheNode pair.
+		 * @param valueOfPair: The value of the CacheNode pair.
+		 * @param nextRef: The reference of the next node in the list.
+		 * @param prevRef: The reference of the previous node in the list.
 		 */
 		public CacheNode(K keyOfPair, V valueOfPair, CacheNode<K, V> nextRef, CacheNode<K, V> prevRef) {
 			key = keyOfPair;

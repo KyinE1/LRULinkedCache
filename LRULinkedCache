@@ -1,6 +1,6 @@
 public class LRULinkedCache<K, V> {
-	private int theSize;			// Current number of items in cache.
-	private int capacity;			// The capacity of cache.
+	private int theSize;		// Current number of items in cache.
+	private int capacity;		// The capacity of cache.
 	private CacheNode<K, V> head;	// Reference to list header node.
 	private CacheNode<K, V> tail;	// Reference to list tail node.
 	
